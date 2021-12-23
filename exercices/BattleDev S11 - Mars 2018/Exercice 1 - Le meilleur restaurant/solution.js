@@ -17,12 +17,14 @@ function LocalPrintArray(chaine) {
 
 // -- Développez votre code dans la fonction ContestResponse ci-après
 function ContestResponse() {
+
   // Implémentez votre code ci-dessous
   /*
   2       // input[0] Nombre de restaurants
   5 9 7   // input[1] Notes du 1er restaurant
   10 17 7 // input[2] Notes du 2e restaurant
   */
+ 
 
   const nombreDeRestaurants = +input[0];
   // i => 1, 2
