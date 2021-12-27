@@ -17,30 +17,77 @@ function LocalPrintArray(chaine) {
 
 // -- Développez votre code dans la fonction ContestResponse ci-après
 function ContestResponse() {
-
-  var  Nbre_Resto=input[0];
-  var notes_resto = input.slice(1);
-  var nombre 
-  var moyenne_max = [];
-
-  for (let i = 0; i < notes_resto.length; i++) {
-    nombre = notes_resto[i].split(' ')
-    let n1 = Number(nombre[0])
-    let n2 = Number(nombre[1])
-    let n3 = Number(nombre[2])
-   let  moyenne = (n1+n2+n3)/3
-        moyenne = Math.ceil(moyenne)
-    moyenne_max.push(moyenne)
-
-    
-  }
-      Math.max(...moyenne_max)
-      console.log( Math.max(...moyenne_max));
- 
-
-
-
   // Implémentez votre code ci-dessous
+
+    var Notes = input[0].split(" ");
+    var NbreDeMeilleursCopains = Number(input[2]);
+    var Copains = input.slice(3);
+    var TbleNotes = 0 ;
+    var MesNotes = [];
+    var NotesDesCopains ;
+    var TbleCopains ;
+    var Distance = 0;
+    var TbleDistance = [];
+    var cc = [];
+
+   
+    
+
+   for (let i = 0; i < Copains.length; i++) {
+     TbleCopains  = Copains[i].split(' ');
+     NotesDesCopains = TbleCopains.map(Number);
+    
+ }
+
+ for (let i = 0; i< Notes.length; i++) {
+     TbleNotes = Number(Notes[i]);
+     MesNotes.push(TbleNotes)
+  
+ for (let i = 0;   i <MesNotes.length; i++) {
+     Distance = Distance + Math.abs( NotesDesCopains[i] - MesNotes[i]) ;  
+    //  console.log(Distance);
+  
+
+ }
+ TbleDistance.push(Distance)
+  // console.log(NotesDesCopains);
+  
+  } 
+ console.log( TbleDistance)
+  
+
+
+   
+  
+//   const chaineMesNotes = input[0].split(" ");
+//   let mesNotes = [];
+  
+//   for(let i = 0; i < chaineMesNotes.length; i = i + 1) {
+//     mesNotes.push(+chaineMesNotes[i]);
+//   }
+  
+//   const nombreDeCopains = +input[1];
+//   const nombreDeMeilleursCopains = +input[2];
+//   let distances = [];
+
+//   for (let i = 3; i < nombreDeCopains + 3; i = i + 1) {
+//     const chaineNotesCopains = input[i].split(" ");
+//     let notesCopains = [];
+//     for(let i = 0; i < chaineNotesCopains.length; i = i + 1) {
+//       notesCopains.push(+chaineNotesCopains[i]);
+//     }
+//  console.log(notesCopains);
+//     let distance = 0;
+//     for (let i = 0; i < mesNotes.length; i = i + 1) {
+//       distance = distance + Math.abs(mesNotes[i] - notesCopains[i]);
+     
+//     }
+//     distances.push(distance);
+//   }
+//     // console.log(distances);
+
+  
+   
 }
 // -- Fin de votre code
 
